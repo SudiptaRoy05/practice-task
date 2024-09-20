@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Ticket</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+    <main>
+
+        <section class="bg-white px-8 w-11/12 mx-auto rounded-2xl shadow-sm grid grid-cols-3 gap-5">
+            <div class=" col-span-2">
+                <div class="border-b-2 border-dashed pb-5">
+                    <h2 class="text-black text-xl font-semibold">select your seat</h2>
+                </div>
+
+                <div class="flex gap-x-2 items-center justify-between border-b-2 border-dashed pb-5 pt-3 mb-5">
+                    <div class="flex items-center">
+                        <p><img src="./images/seat-gray.png" alt=""></p>
+                        <p class="text-xl">Available</p>
+                    </div>
+
+                    <div class="flex items-center">
+                        <p><img src="./images/seat-green.png" alt=""></p>
+                        <p class="text-green-500 text-xl">Selected</p>
+                    </div>
+                </div>
+                <!-- section: seat section start -->
+                <div class="grid grid-cols-6 items-center gap-y-5 mr-20">
+                    <!-- front seat -->
+                    <p class="col-span-1"></p>
+                    <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
+                        <p class="col-span-8"></p>
+                        <button class="btn col-span-2">
+                            <img src="./images/seat-gray.png" class="bg-white rounded-2xl" alt="">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="bg-green-500">input section</div>
+
+        </section>
+
+    </main>
 </body>
+
 </html>
