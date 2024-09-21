@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -10,45 +10,140 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="w-10/12 mx-auto">
+    <header>
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ">
+                            <li><a>Home</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl">E-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-xl ">
+                        <li><a>Home</a></li>
+                        <li><a>About Us</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn border-green-500 text-green-500">Bus <img src="./images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
-
-        <section class="bg-white px-8 w-11/12 mx-auto rounded-2xl shadow-sm grid grid-cols-3 gap-5">
-            <div class=" col-span-2">
-                <div class="border-b-2 border-dashed pb-5">
-                    <h2 class="text-black text-xl font-semibold">select your seat</h2>
-                </div>
-
-                <div class="flex gap-x-2 items-center justify-between border-b-2 border-dashed pb-5 pt-3 mb-5">
-                    <div class="flex items-center">
-                        <p><img src="./images/seat-gray.png" alt=""></p>
-                        <p class="text-xl">Available</p>
-                    </div>
-
-                    <div class="flex items-center">
-                        <p><img src="./images/seat-green.png" alt=""></p>
-                        <p class="text-green-500 text-xl">Selected</p>
+        <section>
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./images/banner.png" class="w-full" />
+                    <div class="absolute top-32 left-[300px] flex justify-between text-center">
+                        <div class="space-y-5">
+                            <h1 class="text-7xl font-extrabold text-white">End-to-End Travel with <br> <span
+                                    class="text-green-500">P Paribahan</span></h1>
+                            <p class="text-white text-xl">Yes, you can run unit tests and view the results directly
+                                within the app. The integrated
+                                testing features allow for a streamlined .</p>
+                            <button class="btn bg-green-500 border-none font-bold text-xl">Buy Tickets</button>
+                        </div>
                     </div>
                 </div>
-                <!-- section: seat section start -->
-                <div class="grid grid-cols-6 items-center gap-y-5 mr-20">
-                    <!-- front seat -->
-                    <p class="col-span-1"></p>
-                    <div class="col-span-11 grid grid-cols-10 gap-16 items-center text-center">
-                        <p class="col-span-8"></p>
-                        <button class="btn col-span-2">
-                            <img src="./images/seat-gray.png" class="bg-white rounded-2xl" alt="">
+            </div>
+        </section>
+        <section class="mt-20">
+            <div class="grid grid-cols-3 gap-20">
+                <div class="col-span-2 ">
+                    <h3 class="text-xl font-semibold border-b-2 border-dashed pb-3">Select your seat</h3>
+                    <div class="flex justify-between px-5 pt-3 border-b-2 border-dashed pb-3">
+                        <div class="flex gap-4">
+                            <img src="./images/seat-gray.png" alt="">
+                            <p>Available</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <img src="./images/seat-green.png" alt="">
+                            <p>Available</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-12 pt-10">
+                        <div class="col-span-10">
+
+                        </div>
+                        <button class="btn col-span-2 "><svg width="26.000000" height="26.000000" viewBox="0 0 26 26" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <desc>
+                                    Created with Pixso.
+                                </desc>
+                                <defs />
+                                <path id="Vector"
+                                    d="M1.91 17.59C2.51 19.04 3.4 20.37 4.51 21.48C5.62 22.59 6.95 23.48 8.4 24.08C9.86 24.68 11.42 25 13 25C14.57 25 16.13 24.68 17.59 24.08C19.04 23.48 20.37 22.59 21.48 21.48C22.59 20.37 23.48 19.04 24.08 17.59C24.68 16.13 25 14.57 25 13C25 11.42 24.68 9.86 24.08 8.4C23.48 6.95 22.59 5.62 21.48 4.51C20.37 3.4 19.04 2.51 17.59 1.91C16.13 1.31 14.57 1 13 1C11.42 1 9.86 1.31 8.4 1.91C6.95 2.51 5.62 3.4 4.51 4.51C3.4 5.62 2.51 6.95 1.91 8.4C1.31 9.86 1 11.42 1 13C1 14.57 1.31 16.13 1.91 17.59ZM11.11 14.88C11.61 15.38 12.29 15.66 13 15.66C13.7 15.66 14.38 15.38 14.88 14.88C15.38 14.38 15.66 13.7 15.66 13C15.66 12.29 15.38 11.61 14.88 11.11C14.38 10.61 13.7 10.33 13 10.33C12.29 10.33 11.61 10.61 11.11 11.11C10.61 11.61 10.33 12.29 10.33 13C10.33 13.7 10.61 14.38 11.11 14.88ZM13 15.66L13 25M10.33 13L1.33 10.33M15.66 13L24.66 10.33"
+                                    stroke="#030712" stroke-opacity="0.700000" stroke-width="2.000000"
+                                    stroke-linejoin="round" stroke-linecap="round" />
+                            </svg>
                         </button>
+                    </div>  
+                    <div class="grid grid-cols-9 col-span-2 gap-x-32 gap-y-16 pt-10">
+                       
+                        <p>A</p>
+                        <button class="btn col-span-2">A1</button>
+                        <button class="btn col-span-2">A2</button>
+                        <button class="btn col-span-2">A3</button>
+                        <button class="btn col-span-2">A4</button>
+                        
+                        <p>B</p>
+                        <button class="btn col-span-2">B1</button>
+                        <button class="btn col-span-2">B2</button>
+                        <button class="btn col-span-2">B3</button>
+                        <button class="btn col-span-2">B4</button>
+
+                        <p>C</p>
+                        <button class="btn col-span-2">C1</button>
+                        <button class="btn col-span-2">C2</button>
+                        <button class="btn col-span-2">C3</button>
+                        <button class="btn col-span-2">C4</button>
+
+                        <p>D</p>
+                        <button class="btn col-span-2">D1</button>
+                        <button class="btn col-span-2">D2</button>
+                        <button class="btn col-span-2">D3</button>
+                        <button class="btn col-span-2">D4</button>
+
+                        <p>E</p>
+                        <button class="btn col-span-2">E1</button>
+                        <button class="btn col-span-2">E2</button>
+                        <button class="btn col-span-2">E3</button>
+                        <button class="btn col-span-2">E4</button>
+
+                        <p>F</p>
+                        <button class="btn col-span-2">F1</button>
+                        <button class="btn col-span-2">F2</button>
+                        <button class="btn col-span-2">F3</button>
+                        <button class="btn col-span-2">F4</button>
                     </div>
+                </div>
+                <div class="border-l-2 border-dashed ps-16">
+                    <h3 class="text-xl font-semibold border-b-2 border-dashed pb-3">Select your seat</h3>
 
                 </div>
 
             </div>
-            <div class="bg-green-500">input section</div>
-
         </section>
-
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
