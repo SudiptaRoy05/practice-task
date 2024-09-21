@@ -9,8 +9,10 @@ const grandTotalEl = document.getElementById('grandTotal');
 const cuponAreaEl = document.getElementById('cuponArea');
 const phoneNumEl = document.getElementById('phoneNum');
 const nextBtnEl = document.getElementById('nextBtn');
+const inpAreaEl = document.getElementsByClassName('inpArea')
+// const modalAreaEl = document.getElementById('modalArea');
 
- 
+
 let selectedSeat = [];
 let totalPrice = 0;
 function handleSelectSeat(event) {
@@ -56,6 +58,9 @@ function handleSelectSeat(event) {
                                 </tr>`
 
 
+
+
+
     } else {
         return alert('maximum seat booked');
     }
@@ -94,14 +99,14 @@ document.getElementById('cuponBtn').addEventListener('click', function () {
 })
 
 
-phoneNumEl.addEventListener('input',function(event){
+phoneNumEl.addEventListener('input', function (event) {
     const inputValue = event.target.value;
-    if(inputValue.length >= 11){
+    if (inputValue.length >= 11) {
         nextBtnEl.removeAttribute('disabled')
     }
-    
+
 })
 
-document.getElementById('btnContinue').addEventListener('click', function(){
+document.getElementById('btnContinue').addEventListener('click', function () {
     window.location.reload();
 })
