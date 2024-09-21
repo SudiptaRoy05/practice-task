@@ -66,6 +66,10 @@
             </div>
         </section>
         <section class="mt-20">
+            <div class="flex gap-80">
+                <h2 class="text-xl font-bold py-5 text-green-500">Available Seat : 24</h2>
+                <h2 class="text-xl font-bold py-5 text-green-500">Price : 550 tk.</h2>
+            </div>
             <div class="grid grid-cols-3 gap-20">
                 <div class="col-span-2 ">
                     <h3 class="text-xl font-semibold border-b-2 border-dashed pb-3">Select your seat</h3>
@@ -138,8 +142,55 @@
                 <div class="border-l-2 border-dashed ps-16">
                     <h3 class="text-xl font-semibold border-b-2 border-dashed pb-3">Select your seat</h3>
 
+                    <div>
+                        <div class="overflow-x-auto">
+                            <table class="table text-lg">
+                              <!-- head -->
+                              <thead>
+                                <tr class="text-xl">
+                                  <th></th>
+                                  <th>Seat<span>0</span></th>
+                                  <th>Class</th>
+                                  <th>Price</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <!-- row 1 -->
+                                <tr class="bg-base-200">
+                                  <th></th>
+                                  <td>C1</td>
+                                  <td>Economy</td>
+                                  <td>550</td>
+                                </tr>
+                                <!-- row 2 -->
+                                <tr>
+                                  <th></th>
+                                  <td>C1</td>
+                                  <td>Economy</td>
+                                  <td>550</td>
+                                </tr>
+                                <!-- row 3 -->
+                               
+                              </tbody>
+                            </table>
+                          </div>
+                    </div>
+                    <hr>
+                    <div class="flex justify-between text-lg font-semibold">
+                        <p>Total Price :</p>
+                        <p>1100 tk.</p>
+                    </div>
+                    <div class="pt-5 ">
+                        <input disabled type="text" class="border border-gray-500 h-12 w-[78%]">
+                        <button disabled class="btn bg-green-500 text-white text-lg font-semibold">Apply</button>
+                    </div>
+                    <div class="flex justify-between text-lg font-semibold pt-5">
+                        <p>Grand Price :</p>
+                        <p>1100 tk.</p>
+                    </div>
+                
+                
                 </div>
-
             </div>
         </section>
     </main>
