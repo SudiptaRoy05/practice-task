@@ -10,7 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        .primary{
+        .primary {
             background-color: rgb(28, 197, 28);
         }
     </style>
@@ -73,7 +73,8 @@
         </section>
         <section class="mt-20">
             <div class="flex gap-44">
-                <h2 class="text-xl font-bold py-5 text-green-500">Available Seat : <span id="availableSeat">24</span></h2>
+                <h2 class="text-xl font-bold py-5 text-green-500">Available Seat : <span id="availableSeat">24</span>
+                </h2>
                 <h2 class="text-xl font-bold py-5 text-green-500">Price : 550 tk.</h2>
                 <div class="flex gap-20">
                     <p class="text-red-600 font-bold text-xl">Cupon: CUPON50</p>
@@ -97,8 +98,9 @@
                         <div class="col-span-10">
 
                         </div>
-                        <button class="btn col-span-2 "><svg width="26.000000" height="26.000000" viewBox="0 0 26 26" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <button class="btn col-span-2 "><svg width="26.000000" height="26.000000" viewBox="0 0 26 26"
+                                fill="none" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <desc>
                                     Created with Pixso.
                                 </desc>
@@ -109,15 +111,15 @@
                                     stroke-linejoin="round" stroke-linecap="round" />
                             </svg>
                         </button>
-                    </div>  
+                    </div>
                     <div class="grid grid-cols-9 col-span-2 gap-x-32 gap-y-16 pt-10">
-                       
+
                         <p>A</p>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">A1</button>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">A2</button>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">A3</button>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">A4</button>
-                        
+
                         <p>B</p>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">B1</button>
                         <button onclick="handleSelectSeat(this)" class="btn col-span-2">B2</button>
@@ -155,36 +157,71 @@
                     <div>
                         <div class="overflow-x-auto">
                             <table class="table text-lg">
-                              <!-- head -->
-                              <thead>
-                                <tr class="text-xl">
-                                  <th></th>
-                                  <th>Seat (<span id="totalBooked">0</span>)</th>
-                                  <th>Class</th>
-                                  <th>Price</th>
-                                </tr>
-                              </thead>
-                              <tbody id="selectedSeat">
-                               <p id="defaultText" class="text-red-700 font-bold text-xl text-center ">No seat Booked</p>
-                              </tbody>
+                                <!-- head -->
+                                <thead>
+                                    <tr class="text-xl">
+                                        <th></th>
+                                        <th>Seat (<span id="totalBooked">0</span>)</th>
+                                        <th>Class</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="selectedSeat">
+                                    <p id="defaultText" class="text-red-700 font-bold text-xl text-center ">No seat
+                                        Booked</p>
+                                </tbody>
                             </table>
-                          </div>
+                        </div>
                     </div>
                     <hr>
                     <div class="flex justify-between text-lg font-semibold">
                         <p>Total Price :</p>
-                        <p > BDT: <span id="totalPrice">0</span></p>
+                        <p> BDT: <span id="totalPrice">0</span></p>
                     </div>
-                    <div class="pt-5 ">
+                    <div id="cuponArea" class="pt-5 ">
                         <input id="cuponField" disabled type="text" class="border border-gray-500 h-12 w-[78%]">
-                        <button id="cuponBtn" disabled class="btn bg-green-500 text-white text-lg font-semibold">Apply</button>
+                        <button id="cuponBtn" disabled
+                            class="btn bg-green-500 text-white text-lg font-semibold">Apply</button>
                     </div>
                     <div class="flex justify-between text-lg font-semibold pt-5">
                         <p>Grand Price :</p>
-                        <p>1100 tk.</p>
+                        <p><span id="grandTotal">****</span></p>
                     </div>
-                
-                
+
+                    <div class="pt-10 space-y-5 mb-5">
+                        <label for="">Name</label>
+
+                        <input id="" type="text" class="border border-gray-500 h-12 w-[100%]">
+
+                        <label for="">Phone</label>
+
+                        <input id="phoneNum" type="text" class="border border-gray-500 h-12 w-[100%]">
+
+                        <label for="">Email</label>
+
+                        <input id="" type="text" class="border border-gray-500 h-12 w-[100%]">
+
+                        
+                    </div>
+                    <div>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <button   id="nextBtn" disabled onclick="my_modal_1.showModal()"
+                        class="btn  bg-green-500 text-white text-lg font-semibold w-[100%]">Apply</button>
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box">
+                                <h3 class="text-lg font-bold">Hello!</h3>
+                                <p class="py-4">Press ESC key or click the button below to close</p>
+
+                                <P>Congo</P>
+                                <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        <button id="btnContinue" class="btn bg-green-500">Continue</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
+                    </div>
                 </div>
             </div>
         </section>
