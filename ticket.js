@@ -61,7 +61,6 @@ function handleSelectSeat(event) {
 }
 
 let cuponDiscount = 0;
-const cuponFieldEl = getValuesById('cuponField');
 const cuponBtnEl = getValuesById('cuponBtn');
 
 cuponBtnEl.addEventListener('click', function(){
@@ -78,7 +77,7 @@ cuponBtnEl.addEventListener('click', function(){
         cuponDiscount = totalPrice * .20;
     }
 
-    cuponFieldEl.classList.add('hidden');
+    // cuponFieldEl.classList.add('hidden');
     cuponBtnEl.classList.add('hidden');
 
 
