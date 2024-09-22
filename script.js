@@ -110,3 +110,4 @@ phoneNumEl.addEventListener('input', function (event) {
 document.getElementById('btnContinue').addEventListener('click', function () {
     window.location.reload();
 })
+
